@@ -16,4 +16,4 @@ Paper.PropTypes = {
   ]) //childrean mempunyai 2 tipe yt array dan single
 };
 
-export default Paper;
+export default Paper; //setiap kali buat Const Paper, jangan lupa untuk di eksport
