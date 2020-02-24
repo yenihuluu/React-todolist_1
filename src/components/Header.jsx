@@ -19,7 +19,7 @@ const Header = ({ showAddToggle, showAdd }) => {
   );
 };
 
-Header.propType = {
+Header.propTypes = {
   showAddToggle: PropType.func.isRequired,
   showAdd: PropType.bool.isRequired
 };
