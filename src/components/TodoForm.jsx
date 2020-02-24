@@ -2,7 +2,7 @@ import React, { useState } from "react"; // Deklarasiin var React dari package/d
 //props-type di hilangin karena props(children) sudah tidak digunakan
 import PropTypes from "prop-types";
 
-const TodoForm = ({ addTodo }) => {
+const TodoForm = ({ addTodo, showAdd }) => {
   const [value, setValue] = useState("");
   //Deklarasiin useState sebagai functional komponen
   //value = object/var dlm sebuah Array yg dideklarasiin yg berisi dr inputan form
@@ -11,33 +11,44 @@ const TodoForm = ({ addTodo }) => {
   // useState("") = memberi penanda bahwa initial state dari value itu isinya string kosong
   const handleFormSubmit = e => {
     e.preventDefault(); //utk memprevent default behaviour dr submit utk refresh page
-
     if (!value) {
       alert("Inputan Kosong!");
       return;
     }
 
+    if (value.length > 50) {
+      alert(
+        "inputan tidak boleh melebih 50 karater, silahkan di input kembali!!"
+      );
+      setValue("");
+      return;
+    }
     addTodo(value);
     //alert(value);
     setValue("");
   };
 
-  return (
-    <section className="add">
-      <form className="add-form" onSubmit={handleFormSubmit}>
-        <input
-          type="text"
-          className="add-input"
-          value={value}
-          onChange={e => setValue(e.target.value)}
-        />
-        <button className="add-btn main-black-color">Add</button>
-      </form>
-    </section>
-  );
+  if (showAdd) {
+    return (
+      <section className="add">
+        <form className="add-form" onSubmit={handleFormSubmit}>
+          <input
+            type="text"
+            className="add-input"
+            value={value}
+            onChange={e => setValue(e.target.value)}
+          />
+          <button className="add-btn main-black-color">Add</button>
+        </form>
+      </section>
+    );
+  } else {
+    return null;
+  }
 };
 
 TodoForm.propTypes = {
-  addTodo: PropTypes.func.isRequired
+  addTodo: PropTypes.func.isRequired,
+  showAdd: PropTypes.bool.isRequired
 };
 export default TodoForm;
