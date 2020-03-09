@@ -16,10 +16,15 @@ const TodoList = () => {
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = value => {
-    const addedTodo = [...todos, { text: value, isCompleted: false }];
-    setTodos(addedTodo);
+    //bertugas menambah Todo list
+    if (todos.length < 10) {
+      const addedTodo = [...todos, { text: value, isCompleted: false }];
+      setTodos(addedTodo);
+    } else {
+      alert("Hanya bisa 10 list");
+    }
   };
-
+  const clearTodos = () => setTodos([]);
   const completeTodo = index => {
     const addedTodo = [...todos];
     addedTodo[index].isCompleted = !addedTodo[index].isCompleted;
@@ -32,7 +37,11 @@ const TodoList = () => {
 
   return (
     <Paper>
-      <Header showAddToggle={showAddToggle} showAdd={showAdd} />
+      <Header
+        showAddToggle={showAddToggle}
+        showAdd={showAdd}
+        clearTodos={clearTodos}
+      />
       <TodoForm addTodo={addTodo} showAdd={showAdd} />
       <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
