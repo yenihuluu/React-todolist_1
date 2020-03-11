@@ -24,7 +24,7 @@ const TodoList = () => {
       alert("Hanya bisa 10 list");
     }
   };
-  const clearTodos = () => setTodos([]);
+  const clearTodos = () => !showAdd && setTodos([]);
   const completeTodo = index => {
     const addedTodo = [...todos];
     addedTodo[index].isCompleted = !addedTodo[index].isCompleted;

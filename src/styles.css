@@ -17,6 +17,14 @@
   color: var(--main-black-color);
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 html {
   font-size: 10px;
 }
@@ -63,7 +71,8 @@ html {
 }
 
 .header-title {
-  flex: 1; /*mengambil sisa space semaksimal mungkin*/
+  /* flex: 1; /*mengambil sisa space semaksimal mungkin*/
+  width: 52%; /* pengganti flex agar ukuran nya rata*/
   text-align: center;
   font-size: 3.6rem;
   font-family: "Homemade Apple", sans-serif;
@@ -71,6 +80,7 @@ html {
   columns: var(--main-black-color);
 }
 .header-btn {
+  width: 24%;
   font-size: 1.8rem; /*1.8rem = 18px */
   font-family: "Bungee", sans-serif;
 
