@@ -47,7 +47,7 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.container {
+/*.container {
   width: 800px;
   height: 800px;
   background-color: #f2eecb;
@@ -59,26 +59,27 @@ html {
   border: 1px solid var(--main-black-color);
   height: 100%;
 
-  display: flex; /*apapun yg di isi didalam frame ini akan jika ditambah itemnya maka item bertambah ke bawah */
+  display: flex; /*apapun yg di isi didalam frame ini akan jika ditambah itemnya maka item bertambah ke bawah 
   flex-direction: column;
   justify-content: space-between;
-}
+}*/
 
+/*
 .header {
   display: flex; /*default nya dlm bentuk row horizontal*/
-  /*flexbox yt sebuah layout aging dlm css yg memudahkan kita utk melayout 1 atau lebih elemen html tanpa harus memikirkan flexibilitas dalam elemen nya.*/
-  align-items: flex-start; /*secara vertikal items tersebut akan di mulai dari atas*/
+/*flexbox yt sebuah layout aging dlm css yg memudahkan kita utk melayout 1 atau lebih elemen html tanpa harus memikirkan flexibilitas dalam elemen nya.
+  align-items: flex-start; /*secara vertikal items tersebut akan di mulai dari atas
 }
 
 .header-title {
-  /* flex: 1; /*mengambil sisa space semaksimal mungkin*/
-  width: 52%; /* pengganti flex agar ukuran nya rata*/
+  /* flex: 1; /*mengambil sisa space semaksimal mungkin
+  width: 52%; /* pengganti flex agar ukuran nya rata
   text-align: center;
   font-size: 3.6rem;
   font-family: "Homemade Apple", sans-serif;
   text-transform: lowercase;
   columns: var(--main-black-color);
-}
+}*/
 /*.header-btn {
   width: 24%;
   font-size: 1.8rem; /*1.8rem = 18px 
@@ -91,7 +92,7 @@ html {
   border: unset;
   outline: unset;
 }*/
-.add {
+/*.add {
   padding: 16px;
 }
 .add-form {
@@ -102,7 +103,7 @@ html {
 .add-input {
   background: unset;
   border: unset;
-  padding: 0 64px; /*atas bawah 0, kanan kiri 64px */
+  padding: 0 64px; /*atas bawah 0, kanan kiri 64px 
 
   flex: 1;
 
@@ -125,7 +126,7 @@ html {
   background: unset;
   border: unset;
   outline: unset;
-}
+}*/
 
 /*kelas ini untuk memberikan efek ketika button di klik 
 .header-btn.main-red-color:active {
@@ -135,13 +136,13 @@ html {
   text-shadow: 1px 1px 2px var(--main-black-color);
 } */
 
-.todos {
+/* .todos {
   display: flex;
   flex-direction: column;
   min-height: 500px;
-}
+} */
 
-.todo {
+/*.todo {
   position: relative;
 
   flex: 1 0 auto;
@@ -161,16 +162,16 @@ html {
   transform: translate(-50%);
   width: 100%;
   height: 50px;
-}
+}*/
 
-.todo-placeholder-text {
+/* .todo-placeholder-text {
   font-family: "Homemade Apple", sans-serif;
   font-size: 24px;
   text-align: center;
   padding: 16px;
-}
+} */
 
-.add-button-placeholder-text {
+/* .add-button-placeholder-text {
   font-family: "Bungee", sans-serif;
   font-size: 24px;
-}
+} */

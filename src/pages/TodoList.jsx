@@ -1,9 +1,9 @@
 import React, { useState } from "react"; //deklarasiin var React dari Folder Package/dependencies/react
 
-import Paper from "../components/Paper"; //panggil variabel Paper dari
-import Header from "../components/Header";
-import TodoForm from "../components/TodoForm";
-import Todos from "../components/Todos";
+import Paper from "../components/paper/Paper"; //panggil variabel Paper dari
+import Header from "../components/header/Header";
+import TodoForm from "../components/todoform/TodoForm";
+import Todos from "../components/todos/Todos";
 //folder src/Components/Paper
 
 const TodoList = () => {

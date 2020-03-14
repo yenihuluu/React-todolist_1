@@ -1,8 +1,11 @@
-import React from "react";
+/** @jsx jsx */
+// import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import { jsx } from "@emotion/core";
 
-import style from "./button.module.css";
+// import styles from "./button.module.css";
+import * as styles from "./button.styles";
 
 const Button = ({ text, onClick, color, align }) => {
   // const className = [
@@ -13,15 +16,18 @@ const Button = ({ text, onClick, color, align }) => {
   //   align === "right" && "align-right"
   // ].join(" ");
 
-  const className = cx(style.headerBtn, {
-    [style.mainBlackColor]: color === "black",
-    [style.mainRedColor]: color === "red",
-    [style.alignLeft]: align === "left",
-    [style.alignRight]: align === "right"
-  });
+  //const className = cx(styles.headerBtn, {
+  //   [styles.mainBlackColor]: color === "black",
+  //   [styles.mainRedColor]: color === "red",
+  //   [styles.alignLeft]: align === "left",
+  //   [styles.alignRight]: align === "right"
+  // });
 
   return (
-    <button className={className} onClick={onClick}>
+    // <button className={className} onClick={onClick}>
+    //   {text}
+    // </button>
+    <button css={styles.button({ color, align })} onClick={onClick}>
       {text}
     </button>
   );
