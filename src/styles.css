@@ -8,9 +8,9 @@
   --main-black-color: #484848;
 }
 
-.main-red-color {
+/*.main-red-color {
   color: var(--main-red-color);
-  /*.main-red-color merupakan style yg berisi variabel --main-red-color. style tersebut bisa digunakan berulang-ulang. class ini nanti bisa di panggil dalam html*/
+  .main-red-color merupakan style yg berisi variabel --main-red-color. style tersebut bisa digunakan berulang-ulang. class ini nanti bisa di panggil dalam html
 }
 
 .main-black-color {
@@ -23,7 +23,7 @@
 
 .align-right {
   text-align: right;
-}
+}*/
 
 html {
   font-size: 10px;
@@ -79,9 +79,9 @@ html {
   text-transform: lowercase;
   columns: var(--main-black-color);
 }
-.header-btn {
+/*.header-btn {
   width: 24%;
-  font-size: 1.8rem; /*1.8rem = 18px */
+  font-size: 1.8rem; /*1.8rem = 18px 
   font-family: "Bungee", sans-serif;
 
   padding: 16px;
@@ -90,7 +90,7 @@ html {
   background: unset;
   border: unset;
   outline: unset;
-}
+}*/
 .add {
   padding: 16px;
 }
@@ -127,16 +127,13 @@ html {
   outline: unset;
 }
 
-/*kelas ini untuk memberikan efek ketika button di klik */
+/*kelas ini untuk memberikan efek ketika button di klik 
 .header-btn.main-red-color:active {
   text-shadow: 1px 1px 2px var(--main-red-color);
 }
 .header-btn.main-black-color:active {
   text-shadow: 1px 1px 2px var(--main-black-color);
-}
-.add-btn.main-black-color:active {
-  text-shadow: 1px 1px 2px var(--main-black-color);
-}
+} */
 
 .todos {
   display: flex;

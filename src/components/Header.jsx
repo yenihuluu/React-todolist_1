@@ -1,7 +1,7 @@
 import React from "react"; // Deklarasiin var React dari package/dependencies/react
 //props-type di hilangin karena props(children) sudah tidak digunakan
 import PropTypes from "prop-types";
-import Button from "./Button";
+import Button from "./button/Button";
 
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   //disini ga menggunakan props (children) karena Header ini bagian dari Children
