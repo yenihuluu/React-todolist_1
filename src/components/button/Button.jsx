@@ -1,11 +1,12 @@
 /** @jsx jsx */
 // import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+// import cx from "classnames";
 import { jsx } from "@emotion/core";
 
 // import styles from "./button.module.css";
 import * as styles from "./button.styles";
+import { useTheme } from "emotion-theming";
 
 const Button = ({ text, onClick, color, align }) => {
   // const className = [
@@ -22,12 +23,13 @@ const Button = ({ text, onClick, color, align }) => {
   //   [styles.alignLeft]: align === "left",
   //   [styles.alignRight]: align === "right"
   // });
+  const theme = useTheme();
 
   return (
     // <button className={className} onClick={onClick}>
     //   {text}
     // </button>
-    <button css={styles.button({ color, align })} onClick={onClick}>
+    <button css={styles.button({ color, align, theme })} onClick={onClick}>
       {text}
     </button>
   );
