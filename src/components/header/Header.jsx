@@ -14,7 +14,6 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   const theme = useTheme();
   return (
     <section css={styles.header}>
-      /
       {/*<button className="header-btn main-black-color" onClick={showAddToggle}> 
         {showAdd ? "Finish" : "Add"} --> BEFORE
   </button>
